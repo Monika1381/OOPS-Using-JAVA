@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.crimedata.controllers.CrimeRecordsController">
+    <children>
+        <!-- Crime Type Field -->
+        <Label text="Crime Type:" layoutX="20" layoutY="20"/>
+        <TextField fx:id="typeField" layoutX="100" layoutY="20" promptText="Enter crime type"/>
+
+        <!-- Crime Location Field -->
+        <Label text="Crime Location:" layoutX="20" layoutY="60"/>
+        <TextField fx:id="locationField" layoutX="100" layoutY="60" promptText="Enter crime location"/>
+
+        <!-- Crime Date Field -->
+        <Label text="Crime Date:" layoutX="20" layoutY="100"/>
+        <TextField fx:id="dateField" layoutX="100" layoutY="100" promptText="Enter crime date"/>
+
+        <!-- Add Crime Button -->
+        <Button text="Add Crime" layoutX="20" layoutY="140" onAction="#addCrime"/>
+
+        <!-- Delete Crime Button -->
+        <Button text="Delete Crime" layoutX="120" layoutY="140" onAction="#deleteCrime"/>
+
+        <!-- Crime Table -->
+        <TableView fx:id="crimeTable" layoutX="20" layoutY="180" prefWidth="460" prefHeight="200">
+            <columns>
+                <TableColumn fx:id="crimeIdColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="crimeTypeColumn" text="Type" prefWidth="130"/>
+                <TableColumn fx:id="crimeLocationColumn" text="Location" prefWidth="130"/>
+                <TableColumn fx:id="crimeDateColumn" text="Date" prefWidth="130"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

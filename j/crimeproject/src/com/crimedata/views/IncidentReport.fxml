@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Alert?>
+<?import javafx.scene.control.Alert.AlertType?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane fx:controller="com.crimedata.controllers.IncidentReportsController"
+          xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" hgap="10" vgap="10">
+    <!-- Table for displaying incident reports -->
+    <TableView fx:id="incidentReportsTable" GridPane.columnSpan="2" GridPane.rowIndex="0">
+        <columns>
+            <TableColumn fx:id="reportIdColumn" text="Report ID" />
+            <TableColumn fx:id="crimeIdColumn" text="Crime ID" />
+            <TableColumn fx:id="reportDescriptionColumn" text="Description" />
+            <TableColumn fx:id="reportDateColumn" text="Report Date" />
+        </columns>
+    </TableView>
+
+    <!-- Form fields for adding new reports -->
+    <TextField fx:id="reportIdField" promptText="Report ID" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="crimeIdField" promptText="Crime ID" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <TextField fx:id="descriptionField" promptText="Description" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+    <TextField fx:id="dateField" promptText="Date" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" />
+
+    <!-- Submit Button -->
+    <HBox spacing="10" GridPane.rowIndex="4" GridPane.columnSpan="2" alignment="CENTER">
+        <Button text="Submit Report" onAction="#handleSubmitReport"/>
+    </HBox>
+</GridPane>

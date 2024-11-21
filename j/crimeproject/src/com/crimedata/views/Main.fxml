@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.crimedata.controllers.MainController" spacing="10" style="-fx-background-color: #e0e0e0;">
+    <!-- Header Section -->
+    <HBox alignment="CENTER" spacing="20" style="-fx-background-color: #A7C7E7; -fx-padding: 15;">
+        <Button text="Dashboard" onAction="#handleDashboard" style="-fx-font-size: 14px; -fx-background-color: #ffffff;" />
+        <Button text="Crime Records" onAction="#handleCrimeRecords" style="-fx-font-size: 14px; -fx-background-color: #ffffff;" />
+        
+        <Button text="Incident Reports" onAction="#handleIncidentReports" style="-fx-font-size: 14px; -fx-background-color: #ffffff;" />
+
+    </HBox>
+    
+    <!-- Content Pane where pages will load -->
+    <Pane fx:id="contentPane" style="-fx-background-color: #f0f0f0; -fx-padding: 20;" VBox.vgrow="ALWAYS">
+        <!-- This pane will be filled with dynamic content based on navigation -->
+    </Pane>
+    
+</VBox>
